@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.HTML">Trang chủ</a></li>
+                <li><a href="info.HTML">Giới thiệu</a></li>
+                <li><a href="news.HTML">Tin tức </a></li>
+                <li><a href="sanpham.HTML">Sản phẩm</a></li>
+                <li><a href="cart.HTML">Giỏ hàng</a></li>
+                <li><a href="#" id="dn">Đăng nhập</a></li>
+                <li><a href="#" id="dn">Đăng KÝ</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container" style="margin-top: 10px;">
+        <div class="row">
+            <div class="left">
+                <img src="images/sp1.jpg" alt="" id="hinh">
+                <div class="row" style="justify-content: center;">
+                    <div class="frame">
+                        <img src="images/sp2.jpg" alt="" id="hinh1">
+                    </div>
+                    <div class="frame">
+                        <img src="images/sp3.jpg" alt="">
+                    </div>
+                    <div class="frame">
+                        <img src="images/sp4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                    <h1 id="ten">IPHONE 16 PRO MAX 256GB</h1>
+                    <h4 id="mota"></h4>
+                    <h3 id="gia"></h3>
+                <div class="row">
+                    <div class="c1"></div>
+                    <div class="c2"></div>
+                    <div class="c3"></div>
+                    <div class="c4"></div>
+                </div>
+                <div class="row">
+                    <button class="fm">Mua ngay</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1>SẢN PHẨM tương tự</h1>
+        </div>
+        <div class="row" id="sptt"></div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col3 m4">
+                <h3>Công ty cổ phần cà phê mèo
+                </h3>
+                <p>© 1997 - 2026 Công Ty Cổ Phần thương mại cà phê mèo - Dịch Vụ khuyến mãi
+                    Giấy chứng nhận đăng ký doanh nghiệp: 0304998358 do Sở KH-ĐT TP.HCM cấp lần đầu ngày 30 tháng 05 năm
+                    2007
+                    Website phongvu.vn thuộc quyền sở hữu của Công ty Cổ phần Thương Mại cà phê mèo - Dịch Vụ Phong Vũ
+                    và được phát
+                    triển bởi Teko.</p>
+            </div>
+            <div class="col3 m4">Hệ thống cửa hàng tìm cửa hàng gần nhất</div>
+            <div class="col3 m4">Tin tức</div>
+            <div class="col3 m4">google mat</div>
+        </div>
+    </footer>
+
+
+    <script src="js/ds.js"></script>
+
+    <script>
+        // Lấy index từ trang chủ về theo href=detail?id=${i}
+        let link = window.location.href;// Tạo một đối tượng URL từ URL hiện tại
+        let url = new URL(link);// Lấy giá trị của tham số 'i'
+        let id = url.searchParams.get("id");
+        let index = id-1;
+        
+
+        // Tìm item theo id
+        let item = ds.find(x => x.id == id);
+
+        console.log(item.gia);
+        document.getElementById("hinh").src=`images/${item.hinh}`;
+       document.getElementById('ten').innerText=item.ten;
+       document.getElementById('gia').innerText=item.gia;
+       document.getElementById('mota').innerText=item.mota;
+
+       let loai= item.loai;
+
+       let sptt= ds.filter(item => item.loai === loai);
+        console.log(sptt);
+       
+        
+        for (let i = 0; i < sptt.length; i++) {
+            document.getElementById("sptt").innerHTML+=
+            `
+            <div class="col3 m3">
+            <img src="images/${sptt[i].hinh}" alt="">
+            <h2>${sptt[i].ten}</h2>
+            <p> ${sptt[i].mota} </p>
+            <h3>${sptt[i].gia}</h3>
+            <button class="fm" onclick='detail(${sptt[i].id})'  >Chi tiết</button>
+        </div>
+            `
+
+        }
+            
+            
+           
+        
+
+    </script>
+
+</body>
+
+</html>

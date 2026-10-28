@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="login">
+        <div id="close">X</div>
+        <h1>Đăng Nhập</h1>
+
+        <form onsubmit="return dangNhap()">
+            <div class="gr">
+                <label for="user">Tài khoản</label>
+                <input type="text" id="user" placeholder="Nhập tài khoản" required>
+            </div>
+
+            <div class="gr">
+                <label for="pass">Mật khẩu</label>
+                <input type="password" id="pass" placeholder="Nhập mật khẩu" required>
+            </div>
+
+            <button type="submit">Đăng nhập</button>
+        </form>
+
+        <p class="link">
+            Chưa có tài khoản?
+            <a href="dangky.html">Đăng ký ngay</a>
+        </p>
+    </div>
+
+   
+
+    <div class="container">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.HTML">Trang chủ</a></li>
+                <li><a href="info.HTML">Giới thiệu</a></li>
+                <li><a href="news.HTML">Tin tức </a></li>
+                <li><a href="sanpham.HTML">Sản phẩm</a></li>
+                <li><a href="cart.HTML">Giỏ hàng</a></li>
+                <li><a href="#" id="dn">Đăng nhập</a></li>
+                <li><a href="#" id="dn">Đăng KÝ</a></li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="banner-1">
+                <img src="images/banner1.png" alt="" id="banner">
+                <i class="fa-solid fa-circle-left btn-left" onclick="left()"></i>
+                <i class="fa-solid fa-circle-right btn-right" onclick="right()"></i>
+                <div class="btn" id="showbtn"></div>
+            </div>
+
+
+        </div>
+    </div>
+
+   
+<div class="container gioithieu">
+    <div class="row">
+        <h1 class="tieude">GIỚI THIỆU</h1>
+    </div>
+
+    <!-- Banner giới thiệu -->
+    <div class="gt-banner">
+        <div class="gt-banner-content">
+            <p class="gt-subtitle">CHÀO MỪNG BẠN ĐẾN VỚI</p>
+            <h2>CÀ PHÊ MÈO</h2>
+            <p>
+                Nơi hương vị cà phê thơm ngon gặp gỡ những người bạn mèo
+                đáng yêu, mang đến cho bạn những phút giây thư giãn.
+            </p>
+            <a href="detail.html" class="gt-btn">KHÁM PHÁ SẢN PHẨM</a>
+        </div>
+    </div>
+
+    <!-- Câu chuyện thương hiệu -->
+    <div class="gt-story">
+        <div class="gt-image">
+            <img src="images/sp2.jpg" alt="Không gian quán cà phê mèo">
+        </div>
+
+        <div class="gt-text">
+            <span class="gt-label">CÂU CHUYỆN CỦA CHÚNG TÔI</span>
+            <h2>Một tách cà phê, một chút yêu thương</h2>
+
+            <p>
+                Cà Phê Mèo được tạo nên từ tình yêu dành cho cà phê
+                và những người bạn mèo dễ thương. Chúng tôi mong muốn
+                xây dựng một không gian gần gũi, nơi mọi người có thể
+                thưởng thức đồ uống ngon và tạm quên đi những bộn bề
+                của cuộc sống.
+            </p>
+
+            <p>
+                Mỗi góc nhỏ tại quán đều được chăm chút để mang lại
+                cảm giác thoải mái, ấm áp và thân thiện cho khách hàng.
+            </p>
+        </div>
+    </div>
+
+    <!-- Giá trị nổi bật -->
+    <div class="gt-values">
+        <h2>ĐIỀU GÌ LÀM NÊN CHÚNG TÔI?</h2>
+        <p class="gt-desc">
+            Chúng tôi luôn mong muốn mang đến trải nghiệm tuyệt vời
+            trong từng khoảnh khắc bạn ghé thăm.
+        </p>
+
+        <div class="gt-cards">
+            <div class="gt-card">
+                <div class="gt-icon">☕</div>
+                <h3>Cà phê chất lượng</h3>
+                <p>
+                    Đồ uống thơm ngon, đa dạng, được chuẩn bị
+                    cẩn thận để phục vụ khách hàng.
+                </p>
+            </div>
+
+            <div class="gt-card">
+                <div class="gt-icon">🐱</div>
+                <h3>Những người bạn mèo</h3>
+                <p>
+                    Không gian thân thiện để bạn thư giãn và
+                    tận hưởng những khoảnh khắc đáng yêu bên mèo.
+                </p>
+            </div>
+
+            <div class="gt-card">
+                <div class="gt-icon">♡</div>
+                <h3>Dịch vụ tận tâm</h3>
+                <p>
+                    Luôn quan tâm đến trải nghiệm của khách hàng,
+                    từ chất lượng đồ uống đến không gian phục vụ.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lời mời -->
+    <div class="gt-contact">
+        <h2>Ghé thăm chúng tôi nhé!</h2>
+        <p>
+            Một không gian ấm áp, một ly cà phê ngon và những người bạn mèo
+            đang chờ bạn khám phá.
+        </p>
+        <a href="index.html" class="gt-btn">QUAY VỀ TRANG CHỦ</a>
+    </div>
+</div>
+
+
+    <footer>
+        <div class="row">
+            <div class="col3 m4">
+                <h3>Công ty cổ phần cà phê mèo
+                </h3>
+                <p>© 1997 - 2026 Công Ty Cổ Phần thương mại cà phê mèo - Dịch Vụ khuyến mãi
+                    Giấy chứng nhận đăng ký doanh nghiệp: 0304998358 do Sở KH-ĐT TP.HCM cấp lần đầu ngày 30 tháng 05 năm
+                    2007
+                    Website phongvu.vn thuộc quyền sở hữu của Công ty Cổ phần Thương Mại cà phê mèo - Dịch Vụ Phong Vũ
+                    và được phát
+                    triển bởi Teko.</p>
+
+            </div>
+
+            <div class="col3 m4">Hệ thống cửa hàng tìm cửa hàng gần nhất</div>
+            <div class="col3 m41">Tin tức</div>
+            <div class="col3 m4">google mat</div>
+        </div>
+    </footer>
+
+
+    <script>
+        arr = ["images/banner1.png", "images/banner2.png", "images/banner3.png"];
+        let nut = arr.length;
+
+        for (let i = 1; i <= nut; i++) {
+            document.getElementById("showbtn").innerHTML +=
+                `<div class="btn1">${i}</div>`
+        }
+
+        let i = 0;
+        function right() {
+            document.getElementById("banner").src = arr[i];
+            i++;
+            if (i == arr.length) {
+                i = 0;
+            }
+
+        }
+
+        function left() {
+            document.getElementById("banner").src = arr[i];
+            i--;
+            if (i < 0) {
+                i = arr.length - 1;
+            }
+
+        }
+
+        setInterval(left, 3000); // hàm tự chạy sau 3s
+    </script>
+
+    <script src="js/ds.js"></script>
+
+    <script>
+        function detail(i) {
+            window.location.href = `detail.html?id=${i}` // chuyển sang trang detail.html
+        }
+
+
+    </script>
+
+    <script>
+        // hiển thị danh mục tra trai cay:
+        let ttc = ds.filter(item => item.loai == "tra trai cay");
+
+        for (let i = 0; i < ds.length; i++) {
+            document.getElementById("show").innerHTML +=
+                `<div class="col3 m3">
+            <img src="images/${ds[i].hinh}" alt="">
+            <h2>${ds[i].ten}</h2>
+            <p> ${ds[i].mota} </p>
+            <h3>${ds[i].gia}</h3>
+            <button class="fm" onclick='detail(${ds[i].id})'  >Chi tiết</button>
+        </div>`
+        }
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#close").click(function () {
+                $("#login").hide();
+            });
+
+            $("#dn").click(function () {
+                $("#login").toggle();
+            });
+        });
+       
+        
+
+    </script>
+
+<script>
+    function dangNhap() {
+        let user = document.getElementById("user").value;
+        let pass = document.getElementById("pass").value;
+
+        
+
+        if (
+            user === "admin" &&
+            pass === "1234") {
+            alert("Đăng nhập thành công!");
+            window.location.href = "index.html";
+        } else {
+            alert("Sai tài khoản hoặc mật khẩu!");
+        }
+
+        return false;
+    }
+</script>
+</body>
+
+</html>

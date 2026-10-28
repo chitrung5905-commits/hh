@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIN TỨC</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="login">
+        <div id="close">X</div>
+        <h1>Đăng Ký</h1>
+    
+        <form onsubmit="return dangKy()">
+            <div class="gr">
+                <label for="user">Tài khoản</label>
+                <input type="text" id="user" placeholder="Nhập tài khoản" required>
+            </div>
+    
+            <div class="gr">
+                <label for="pass">Mật khẩu</label>
+                <input type="password" id="pass" placeholder="Nhập mật khẩu" required>
+            </div>
+    
+            <div class="gr">
+                <label for="confirmPass">Xác nhận mật khẩu</label>
+                <input type="password" id="confirmPass" placeholder="Nhập lại mật khẩu" required>
+            </div>
+    
+            <button type="submit">Đăng ký</button>
+        </form>
+    
+        <p class="link">
+            Đã có tài khoản?
+            <a href="login.html">Đăng nhập ngay</a>
+        </p>
+    </div>
+
+    <div class="container">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.HTML">Trang chủ</a></li>
+                <li><a href="info.HTML">Giới thiệu</a></li>
+                <li><a href="news.HTML">Tin tức </a></li>
+                <li><a href="sanpham.HTML">Sản phẩm</a></li>
+                <li><a href="cart.HTML">Giỏ hàng</a></li>
+                <li><a href="#" id="dn">Đăng nhập</a></li>
+                <li><a href="#" id="dn">Đăng KÝ</a></li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="banner-1">
+                <img src="images/banner1.png" alt="" id="banner">
+                <i class="fa-solid fa-circle-left btn-left" onclick="left()"></i>
+                <i class="fa-solid fa-circle-right btn-right" onclick="right()"></i>
+                <div class="btn" id="showbtn"></div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1>TIN TỨC</h1>
+            <div class="title-line"></div>
+        </div>
+
+        <div class="row news-list">
+
+            <div class="news-item">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80"
+                     alt="Ly cà phê thơm ngon">
+
+                <div class="news-content">
+                    <div class="news-date">28/10/2026</div>
+                    <h2>Khám phá hương vị cà phê đặc biệt</h2>
+                    <p>Thưởng thức những ly cà phê thơm ngon, đậm đà được pha chế từ những hạt cà phê chất lượng tại Caffe Mèo.</p>
+                    <a href="#">Xem thêm</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=800&q=80"
+                     alt="Không gian quán cà phê">
+
+                <div class="news-content">
+                    <div class="news-date">25/10/2026</div>
+                    <h2>Không gian thư giãn tại Caffe Mèo</h2>
+                    <p>Một góc nhỏ ấm áp, yên bình dành cho bạn bè, học tập, làm việc và tận hưởng những phút giây thư giãn.</p>
+                    <a href="#">Xem thêm</a>
+                </div>
+            </div>
+
+            <div class="news-item">
+                <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=800&q=80"
+                     alt="Chú mèo đáng yêu">
+
+                <div class="news-content">
+                    <div class="news-date">20/10/2026</div>
+                    <h2>Gặp gỡ những người bạn mèo đáng yêu</h2>
+                    <p>Đến với Caffe Mèo để nhâm nhi cà phê, vui chơi cùng những chú mèo dễ thương và lưu giữ khoảnh khắc đáng nhớ.</p>
+                    <a href="#">Xem thêm</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col3 m4">
+                <h3>Công ty cổ phần cà phê mèo
+                </h3>
+                <p>© 1997 - 2026 Công Ty Cổ Phần thương mại cà phê mèo - Dịch Vụ khuyến mãi
+                    Giấy chứng nhận đăng ký doanh nghiệp: 0304998358 do Sở KH-ĐT TP.HCM cấp lần đầu ngày 30 tháng 05 năm
+                    2007
+                    Website phongvu.vn thuộc quyền sở hữu của Công ty Cổ phần Thương Mại cà phê mèo - Dịch Vụ Phong Vũ
+                    và được phát
+                    triển bởi Teko.</p>
+
+            </div>
+
+            <div class="col3 m4">Hệ thống cửa hàng tìm cửa hàng gần nhất</div>
+            <div class="col3 m41">Tin tức</div>
+            <div class="col3 m4">google mat</div>
+        </div>
+    </footer>
+
+
+    <script>
+        arr = ["images/banner1.png", "images/banner2.png", "images/banner3.png"];
+        let nut = arr.length;
+
+        for (let i = 1; i <= nut; i++) {
+            document.getElementById("showbtn").innerHTML +=
+                `<div class="btn1">${i}</div>`
+        }
+
+        let i = 0;
+        function right() {
+            document.getElementById("banner").src = arr[i];
+            i++;
+            if (i == arr.length) {
+                i = 0;
+            }
+
+        }
+
+        function left() {
+            document.getElementById("banner").src = arr[i];
+            i--;
+            if (i < 0) {
+                i = arr.length - 1;
+            }
+
+        }
+
+        setInterval(left, 3000); // hàm tự chạy sau 3s
+    </script>
+
+    <script src="js/ds.js"></script>
+
+    <script>
+        function detail(i) {
+            window.location.href = `detail.html?id=${i}` // chuyển sang trang detail.html
+        }
+
+
+    </script>
+
+    <script>
+        // hiển thị danh mục tra trai cay:
+        let ttc = ds.filter(item => item.loai == "tra trai cay");
+
+        for (let i = 0; i < ds.length; i++) {
+            document.getElementById("show").innerHTML +=
+                `<div class="col3 m3">
+            <img src="images/${ds[i].hinh}" alt="">
+            <h2>${ds[i].ten}</h2>
+            <p> ${ds[i].mota} </p>
+            <h3>${ds[i].gia}</h3>
+            <button class="fm" onclick='detail(${ds[i].id})'  >Chi tiết</button>
+        </div>`
+        }
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#close").click(function () {
+                $("#login").hide();
+            });
+
+            $("#dn").click(function () {
+                $("#login").toggle();
+            });
+        });
+       
+        
+
+    </script>
+
+<script>
+    function dangNhap() {
+        let user = document.getElementById("user").value;
+        let pass = document.getElementById("pass").value;
+
+        
+
+        if (
+            user === "admin" &&
+            pass === "1234") {
+            alert("Đăng nhập thành công!");
+            window.location.href = "index.html";
+        } else {
+            alert("Sai tài khoản hoặc mật khẩu!");
+        }
+
+        return false;
+    }
+</script>
+</body>
+
+</html>

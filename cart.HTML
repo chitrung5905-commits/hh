@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+       
+<body>
+    <div class="container">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.HTML">Trang chủ</a></li>
+                <li><a href="info.HTML">Giới thiệu</a></li>
+                <li><a href="news.HTML">Tin tức </a></li>
+                <li><a href="sanpham.HTML">Sản phẩm</a></li>
+                <li><a href="cart.HTML">Giỏ hàng</a></li>
+                <li><a href="#" id="dn">Đăng nhập</a></li>
+                <li><a href="#" id="dn">Đăng KÝ</a></li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="banner-1">
+                <img src="images/banner1.png" alt="" id="banner">
+                <i class="fa-solid fa-circle-left btn-left" onclick="left()"></i>
+                <i class="fa-solid fa-circle-right btn-right" onclick="right()"></i>
+                <div class="btn" id="showbtn"></div>
+            </div>
+              
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row"><h1>THÔNG TIN GIỎ HÀNG</h1></div>
+        <div class="row" >
+            <table border="1">
+                <tr>
+                    <th>STT</th>
+                    <th>TÊN SẢN PHẨM</th>
+                    <th>HÌNH</th>
+                    <th>Số Lượng</th>
+                    <th>Đơn giá</th>
+                    <th>Thành tiền</th>
+                    <th>Thao tác</th>
+                </tr>
+                <tbody id="addCart">
+                    
+                </tbody>
+            
+                <tr>
+                    <td>TÔNG THÀNH TIỀN:</td>
+                    <td colspan="5" id="tongtien">51.000.000</td>
+                    <td><button class="fm9">THANH TOÁN</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1>SẢN PHẨM CAFE</h1>
+        </div>
+        <div class="row" id="productAll"></div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col3 m4">
+                <h3>Công ty cổ phần cà phê mèo
+                </h3>
+                <p>© 1997 - 2026 Công Ty Cổ Phần thương mại cà phê mèo - Dịch Vụ khuyến mãi
+                    Giấy chứng nhận đăng ký doanh nghiệp: 0304998358 do Sở KH-ĐT TP.HCM cấp lần đầu ngày 30 tháng 05 năm
+                    2007
+                    Website phongvu.vn thuộc quyền sở hữu của Công ty Cổ phần Thương Mại cà phê mèo - Dịch Vụ Phong Vũ
+                    và được phát
+                    triển bởi Teko.</p>
+
+            </div>
+
+            <div class="col3 m4">Hệ thống cửa hàng tìm cửa hàng gần nhất</div>
+            <div class="col3 m41">Tin tức</div>
+            <div class="col3 m4">google mat</div>
+        </div>
+    </footer>
+
+
+    <script>
+        arr = ["images/banner1.png", "images/banner2.png", "images/banner3.png"];
+        let nut = arr.length;
+
+        for (let i = 1; i <= nut; i++) {
+            document.getElementById("showbtn").innerHTML +=
+                `<div class="btn1">${i}</div>`
+        }
+
+        let i = 0;
+        function right() {
+            document.getElementById("banner").src = arr[i];
+            i++;
+            if (i == arr.length) {
+                i = 0;
+            }
+
+        }
+
+        function left() {
+            document.getElementById("banner").src = arr[i];
+            i--;
+            if (i < 0) {
+                i = arr.length - 1;
+            }
+
+        }
+
+        setInterval(left, 3000); // hàm tự chạy sau 3s
+    </script>
+
+    <script src="js/ds.js"></script>
+    <script src="js/cart.js"></script>
+
+    
+</body>
+
+</html>
